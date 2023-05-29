@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7601825665134669549}
   - component: {fileID: 3339457483713583367}
   - component: {fileID: 8271783247153411195}
+  - component: {fileID: 8699058711368204710}
   m_Layer: 0
   m_Name: White Puck
-  m_TagString: Puck
+  m_TagString: White Puck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,3 +124,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.64
+--- !u!114 &8699058711368204710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438533695179645843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17794b35ea5ce5f4897f731aabc1fbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

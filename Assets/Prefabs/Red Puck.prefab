@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4463673741943918478}
   m_Layer: 0
   m_Name: Red Puck
-  m_TagString: Puck
+  m_TagString: Red Puck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
