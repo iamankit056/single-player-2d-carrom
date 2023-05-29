@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6831110821995919670}
   - component: {fileID: 239741147908464097}
   - component: {fileID: 9083164716394306001}
-  - component: {fileID: 4576997931464742726}
   - component: {fileID: 7883614424724456901}
   m_Layer: 0
   m_Name: Bot Striker
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bf630c97345801241832963ffdba0c38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -126,18 +125,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.35
---- !u!114 &4576997931464742726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3696988029013330375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eb97a09c0fba954da8c2c499fd5579b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7883614424724456901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17794b35ea5ce5f4897f731aabc1fbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frictionAmount: 0.05
 --- !u!1 &5448240569343154857
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +210,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.5641353, b: 0, a: 1}
   m_FlipX: 0

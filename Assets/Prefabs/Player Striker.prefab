@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 8021417512285038312}
   - component: {fileID: 4292829833958506070}
   - component: {fileID: 4007812487416169348}
-  - component: {fileID: 30467127162688746}
   - component: {fileID: 6259076015770524489}
   - component: {fileID: 3120520871269649263}
   m_Layer: 0
@@ -211,20 +210,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.35
---- !u!114 &30467127162688746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7567014784419782431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eb97a09c0fba954da8c2c499fd5579b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _strikerStartPosition: {x: 0, y: 0, z: 0}
-  _gameManager: {fileID: 0}
 --- !u!114 &6259076015770524489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17794b35ea5ce5f4897f731aabc1fbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frictionAmount: 0.2
+  frictionAmount: 0.05
 --- !u!114 &3120520871269649263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,3 +235,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881a3dafa15270d4d8afaea9261e315e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _strikerController: {fileID: 0}
+  _strikerStartPosition: {x: 0, y: -4, z: 0}

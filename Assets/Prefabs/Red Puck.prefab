@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 531375944556688181}
   - component: {fileID: 2888151483042822023}
   - component: {fileID: 4463673741943918478}
+  - component: {fileID: 7822005570388855507}
   m_Layer: 0
   m_Name: Red Puck
   m_TagString: Red Puck
@@ -116,10 +117,23 @@ CircleCollider2D:
   m_GameObject: {fileID: 3106160841921489953}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aba8102e765b5174abd2b2b790a9f1c0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.64
+--- !u!114 &7822005570388855507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106160841921489953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17794b35ea5ce5f4897f731aabc1fbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frictionAmount: 0.02

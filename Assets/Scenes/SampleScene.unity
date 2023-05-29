@@ -468,8 +468,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 100, y: 0}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &221557211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,9 +483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 100
     m_Right: 0
-    m_Top: 0
+    m_Top: 100
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 0
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 420844339}
   - component: {fileID: 420844338}
   m_Layer: 5
-  m_Name: Total Time
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,12 +744,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711698446fd0da34e959748882cfc9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timerBar: {fileID: 420844338}
   _botScoreBar: {fileID: 98678717}
   _playerScoreBar: {fileID: 2030996988}
   _botStriker: {fileID: 1521386854}
   _playerStriker: {fileID: 110941296}
   playerTurn: 1
-  gameover: 1
+  gameover: 0
 --- !u!4 &554761889
 Transform:
   m_ObjectHideFlags: 0
@@ -824,6 +825,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2933459619959149599, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120520871269649263, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 554761888}
     - target: {fileID: 3120520871269649263, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
       propertyPath: _strikerController
       value: 
@@ -832,7 +841,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Striker
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8021417512285038312, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 30467127162688746, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
 --- !u!1 &756645849
 GameObject:
@@ -1315,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3696988029013330375, guid: 35636d4e1f735b14887502edafa5f2d4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4320880167820687751, guid: 35636d4e1f735b14887502edafa5f2d4, type: 3}
       propertyPath: m_RootOrder
@@ -1365,7 +1379,8 @@ PrefabInstance:
       propertyPath: _strikerStartPosition.y
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4576997931464742726, guid: 35636d4e1f735b14887502edafa5f2d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35636d4e1f735b14887502edafa5f2d4, type: 3}
 --- !u!1 &1397114194
 GameObject:
