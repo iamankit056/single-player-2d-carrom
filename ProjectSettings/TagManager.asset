@@ -9,6 +9,7 @@ TagManager:
   - White Puck
   - Red Puck
   - Pucks
+  - StrikerController
   layers:
   - Default
   - TransparentFX
