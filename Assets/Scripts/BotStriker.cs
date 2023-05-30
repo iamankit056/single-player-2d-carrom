@@ -23,7 +23,7 @@ public class BotStriker : MonoBehaviour
      *----------------------------------------------------------------------*/
     private const float X_BOUND = 3.15f;
     private const float Y_BOUND = 5f;
-    private const float MAX_STRIKE_FORCE = 60f;
+    private const float MAX_STRIKE_FORCE = 50f;
     private const float MIN_STRIKE_FORCE = 10f;
 
     /*-----------------------------------------------------------------------
@@ -55,7 +55,6 @@ public class BotStriker : MonoBehaviour
      *----------------------------------------------------------------------*/
     private Vector3 GetRandomStrikePosition()
     {
-        Random.InitState(Random.Range(1, 5));
         float x = Random.Range(-X_BOUND, X_BOUND);
         return new Vector3(x, 4, 0);
     }

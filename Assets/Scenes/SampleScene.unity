@@ -881,6 +881,7 @@ MonoBehaviour:
   _playerStriker: {fileID: 7567014784419782431, guid: 5fe45c2f7f7ef614dade70615233a12c, type: 3}
   _arrangedPucks: {fileID: 780119558673493468, guid: 881817f67b6f982439de3c417eb93907, type: 3}
   _gameoverBoard: {fileID: 1275844797}
+  _winnerBoard: {fileID: 44847762}
   playerTurn: 0
   gameover: 0
   gameStarted: 1

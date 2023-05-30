@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _playerStriker;
     [SerializeField] private GameObject _arrangedPucks;
     [SerializeField] private GameObject _gameoverBoard;
+    [SerializeField] private TextMeshProUGUI _winnerBoard;
 
     /*-----------------------------------------------------------------------
      |  All private variables 
@@ -78,6 +79,14 @@ public class GameManager : MonoBehaviour
     {
         gameStarted = false;
         CancelInvoke();
+        
+        if(_playerScore == _botScore)
+            _winnerBoard.text = "Draw";
+        else if(_playerScore > _botScore)
+            _winnerBoard.text = "You Win";
+        else
+            _winnerBoard.text = "You Loss";
+
         _gameoverBoard.SetActive(true);
     }
 
