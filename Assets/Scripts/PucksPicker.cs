@@ -12,7 +12,7 @@ public class PucksPicker : MonoBehaviour
     /*-----------------------------------------------------------------------
      |  Unity predefined methods
      *----------------------------------------------------------------------*/
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Black Puck"))
         {
@@ -35,6 +35,5 @@ public class PucksPicker : MonoBehaviour
             else
                 _gameManager.UpdateBotScore(10);
         }
-        
     }    
 }

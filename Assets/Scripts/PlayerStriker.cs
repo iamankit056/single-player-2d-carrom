@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerStriker : MonoBehaviour
 {
-    /*-----------------------------------------------------------------------
-     |  All serialize field private variavles
-     *----------------------------------------------------------------------*/
-    [SerializeField] private GameManager _gameManager;
-    [SerializeField] private Slider _strikerController;
-    [SerializeField] private Vector3 _strikerStartPosition = new Vector3(0, -4, 0);
 
     /*-----------------------------------------------------------------------
      |  All private variables 
      *----------------------------------------------------------------------*/
+    private GameManager _gameManager;
+    private Slider _strikerController;
     private Rigidbody2D _strikerRb2D;
     private float _strikeForce = 100f;
     private Vector3 _strikeDirection;
@@ -27,6 +23,8 @@ public class PlayerStriker : MonoBehaviour
     private void Start() 
     {
         _strikerRb2D = GetComponent<Rigidbody2D>();
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _strikerController = GameObject.Find("Striker Controller").GetComponent<Slider>();
         _strikerController.onValueChanged.AddListener(delegate { MoveOnXAxis(); });  
     }
 
@@ -60,10 +58,7 @@ public class PlayerStriker : MonoBehaviour
 
     private void ResetPosition()
     {
-        _isStrike = false;
-        _strikerRb2D.velocity = Vector3.zero;
-        transform.position = _strikerStartPosition;
+        _gameManager.ChangeTurn();
+        Destroy(gameObject);
     }
-
-    
 }

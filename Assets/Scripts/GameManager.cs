@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
         UpdateBotScore();
         UpdatePlayerScore();  
 
+        Instantiate(_playerStriker);
+
         InvokeRepeating("StartCountDown", 0.0f, 1.0f); 
     }
 
@@ -122,12 +124,11 @@ public class GameManager : MonoBehaviour
 
     public void ChangeTurn()
     {
-        if(playerTurn)
-        {
-            _botStriker.SetActive(playerTurn);
-            _playerStriker.SetActive(!playerTurn);
-        }
-
         playerTurn = !playerTurn;
+
+        if(playerTurn)
+            Instantiate(_botStriker);
+        else 
+            Instantiate(_playerStriker);
     }
 }
