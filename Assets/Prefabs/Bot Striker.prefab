@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1521386861}
   m_Layer: 0
   m_Name: Bot Striker
-  m_TagString: Untagged
+  m_TagString: Striker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

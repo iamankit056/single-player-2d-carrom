@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 3120520871269649263}
   m_Layer: 0
   m_Name: Player Striker
-  m_TagString: Player
+  m_TagString: Striker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,5 +235,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881a3dafa15270d4d8afaea9261e315e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 0}
-  _strikerController: {fileID: 0}

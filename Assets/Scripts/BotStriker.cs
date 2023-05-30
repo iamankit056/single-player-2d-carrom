@@ -15,7 +15,7 @@ public class BotStriker : MonoBehaviour
      *----------------------------------------------------------------------*/
     private Rigidbody2D _strikerRb2D;
     private Vector3 _strikePosition;
-    private float _strikerPositionResetTime = 5f;
+    private float _strikerPositionResetTime = 2f;
     private bool _striked = false;
 
     /*-----------------------------------------------------------------------
@@ -23,6 +23,8 @@ public class BotStriker : MonoBehaviour
      *----------------------------------------------------------------------*/
     private const float X_BOUND = 3.15f;
     private const float Y_BOUND = 5f;
+    private const float MAX_STRIKE_FORCE = 60f;
+    private const float MIN_STRIKE_FORCE = 10f;
 
     /*-----------------------------------------------------------------------
      |  Unity predefined methods
@@ -30,21 +32,20 @@ public class BotStriker : MonoBehaviour
     private void Start() 
     {
         _strikerRb2D = GetComponent<Rigidbody2D>(); 
-        _strikePosition = GetRandomStrikePosition();
-        
+        _strikePosition = GetRandomStrikePosition();        
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    private void Update() 
+    private void FixedUpdate() 
     {
-        if(!_gameManager.gameover)
+        if(!_gameManager.gameover && !_striked)
         {
-            Vector3 deltaChange = _strikePosition - transform.position;
-            Vector3 velocity = deltaChange.normalized;
+            Vector3 displacement = _strikePosition - transform.position;
+            Vector3 velocity = displacement.normalized;
             
-            if(deltaChange.magnitude > 0.5)
+            if(displacement.magnitude > 0.5)
                 transform.Translate(velocity);
-            else if(!_striked)
+            else
                 Strike();
         }
     }
@@ -54,6 +55,7 @@ public class BotStriker : MonoBehaviour
      *----------------------------------------------------------------------*/
     private Vector3 GetRandomStrikePosition()
     {
+        Random.InitState(Random.Range(1, 5));
         float x = Random.Range(-X_BOUND, X_BOUND);
         return new Vector3(x, 4, 0);
     }
@@ -66,6 +68,11 @@ public class BotStriker : MonoBehaviour
         return (transform.position - new Vector3(x, y, z));
     }
 
+    private float StrikeForce()
+    {
+        return Random.Range(MIN_STRIKE_FORCE, MAX_STRIKE_FORCE);
+    }
+
     private void ResetPosition()
     {
         _gameManager.ChangeTurn();
@@ -76,6 +83,6 @@ public class BotStriker : MonoBehaviour
     {
         _striked = true;
         Invoke("ResetPosition", _strikerPositionResetTime);
-        _strikerRb2D.AddForce(GetRandomStrikeDirection(), ForceMode2D.Impulse);
+        _strikerRb2D.AddForce(GetRandomStrikeDirection().normalized * StrikeForce(), ForceMode2D.Impulse);
     }
 }

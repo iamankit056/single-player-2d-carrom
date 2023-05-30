@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Puck
-  - Red Puck
+  - Striker
   - Black Puck
   - White Puck
+  - Red Puck
+  - Pucks
   layers:
   - Default
   - TransparentFX
